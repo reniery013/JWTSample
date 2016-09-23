@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+    <head>
+        <title>JWT Token Sample</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em;
+            }
+        </style>
+        
+        <!-- load angular via CDN -->
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+
+        <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="./restricted.html"><i class="fa fa-home"></i> Restricted</a></li>
+				</ul>
+			</div>
+			</nav>
+		</header>
+
+        <div class="container">
+
+            <div ng-controller="mainController">
+            
+                <div>
+                    <label>username</label>
+                    <input type="text" ng-model="username" />
+                </div>
+                <div>
+                    <label>password</label>
+                    <input type="text" ng-model="password" />
+                </div>
+                <hr />
+                <button ng-click="login()">
+                    Login
+                </button>
+            </div>
+            <div>
+                <h1> {{ token }} </h1>
+            </div>
+            
+		</div>
+
+    </body>
+</html>

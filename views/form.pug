@@ -1,0 +1,14 @@
+html
+    head
+        title Form Tester
+    body
+        form(action="/login", method="POST")
+            div
+                label(for="user") User: 
+                input(name="user" value="user")
+            br
+            div
+                label(for="password") Password: 
+                input(name="password" value="password")
+            br
+            button(type="submit") Login

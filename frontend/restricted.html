@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+   <head>
+        <title>Restricted Content</title>
+        <script src="angular.min.js"></script>
+        <script src="restricted.js"></script>
+   </head>
+   <body>
+       <div ng-controller="restrictedController">
+            <h1 ng-show="restricted">Restricted Content</h1>
+            <h1 ng-hide="restricted">{{ message }}</h1>
+            <h1 ng-hide="restricted">{{ token }}</h1>
+            <hr />
+            <button ng-click="getRestrictedMessage()">
+                See Restricted Content
+            </button>
+       </div>
+   </body>
+</html>
